@@ -1,4 +1,6 @@
 TARGET=_site
+mkdir $TARGET
+apt install svn
 
 svn co http://svn.code.sf.net/p/farmanager/code/trunk/enc enc
 
