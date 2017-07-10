@@ -1,6 +1,10 @@
 TARGET=_site
 mkdir $TARGET
-sudo apt install svn
+echo '' | sudo -S apt-get install svn
+
+snap
+
+cat /etc/os-release
 
 svn co http://svn.code.sf.net/p/farmanager/code/trunk/enc enc
 
