@@ -17,5 +17,5 @@ echo --- Building docs ---
 
 echo --- Copying docs ---
 git status
-cp -R outfinalnew64 $TARGET
-cp -R outfinalnew32 $TARGET
+cp -Rv outfinalnew64 $TARGET
+cp -Rv outfinalnew32 $TARGET
