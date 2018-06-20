@@ -7,7 +7,7 @@ echo --- Build OS ---
 cat /etc/os-release
 
 echo --- Cloning Far Manager ---
-git clone https://github.com/FarGroup/FarManager
+git clone https://github.com/techtonik/FarManager
 cd FarManager
 
 echo --- Building docs ---
