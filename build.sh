@@ -1,12 +1,21 @@
-TARGET=_site
+#!/bin/bash
+
+TARGET=$PWD/_site
 mkdir $TARGET
-echo '' | sudo -S apt-get install svn
 
-snap
-
+echo --- Build OS ---
 cat /etc/os-release
 
-svn co http://svn.code.sf.net/p/farmanager/code/trunk/enc enc
+echo --- Cloning Far Manager ---
+git clone https://github.com/FarGroup/FarManager
+cd FarManager
 
-cd $TARGET
-lua ../enc/tools/lua/scripts/tp2hh.lua ../enc/enc_lua/luafar_manual.tsi tsi ../enc/tools/lua/templates/api.tem
+echo --- Building docs ---
+./misc/nightly/docs.sh
+./misc/nightly/enc.sh
+./misc/nightly/far.sh
+
+echo --- Copying docs ---
+git status
+cp -R outfinalnew64 $TARGET
+cp -R outfinalnew32 $TARGET
