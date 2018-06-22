@@ -23,4 +23,5 @@ cp -Rv outfinalnew32 $TARGET
 
 echo --- Building directory index ---
 cd $TARGET
-find . > index.html
+echo "<pre>" > index.html
+find . >> index.html
