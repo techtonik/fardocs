@@ -17,6 +17,7 @@ echo --- Building docs ---
 
 echo --- Copying docs ---
 git status
+ls -la
 cp -Rv outfinalnew64 $TARGET
 cp -Rv outfinalnew32 $TARGET
 
