@@ -19,3 +19,7 @@ echo --- Copying docs ---
 git status
 cp -Rv outfinalnew64 $TARGET
 cp -Rv outfinalnew32 $TARGET
+
+echo --- Building directory index ---
+cd $TARGET
+tree -H '.' -L 1 > index.html
